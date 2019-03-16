@@ -724,9 +724,9 @@ PlayerSettings:
     UNet: 1
   facebookSdkVersion: 7.9.4
   apiCompatibilityLevel: 2
-  cloudProjectId: a138c7f1-ba57-42f2-a1c7-c2bde3bb46c9
-  projectName: DolDam
-  organizationId: happyfacefriend
+  cloudProjectId: dddb2618-bd8a-473e-b548-d4c82e0b9c1b
+  projectName: Rocky DownHill for Line
+  organizationId: cienproject
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0

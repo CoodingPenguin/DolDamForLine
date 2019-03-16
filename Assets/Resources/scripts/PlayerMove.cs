@@ -4,6 +4,7 @@ using UnityEngine.UI;
 
 public class PlayerMove : MonoBehaviour
 {
+    public static PlayerMove instance;
 
     public bool isDead;
 
@@ -28,6 +29,7 @@ public class PlayerMove : MonoBehaviour
 
     public float snowManScale;
     public float obstacleScale;
+
 
     public GameObject SnowParticle;
     public GameObject feverParticle;
@@ -56,6 +58,13 @@ public class PlayerMove : MonoBehaviour
     private int level;
 
     public bool feverIsEnd = false;
+
+    
+    private void Awake()
+    {
+        instance = this;
+    }
+    
 
     // Use this for initialization
     void Start()
@@ -109,7 +118,7 @@ public class PlayerMove : MonoBehaviour
             {
 
                 SetScale(ballScale + scaleSpeed * Time.deltaTime);
-                MoveAndRotate();
+                MoveAndRotate();  
                 if (ballScale >= goToFeverScale)
                 {
                     SoundManager.instance.PlaySingle(feverStart);
@@ -120,6 +129,7 @@ public class PlayerMove : MonoBehaviour
                     Destroy(p, 2f);
                     level += 1;
                 }
+
             }
             else if (GameManager.instance.feverState == 1)    //평상시->피버모드로 전환
             {
@@ -167,6 +177,7 @@ public class PlayerMove : MonoBehaviour
             {
                 if (os.GetIsHit() == false)
                 {
+                   
                     if (GameManager.instance.feverState == 0)
                     {
                         if (col.tag == "Snowman")
@@ -204,6 +215,8 @@ public class PlayerMove : MonoBehaviour
                         Destroy(p, 2f);
                         GameManager.instance.AddScore(2000);    // 2000점
                     }
+                    
+                    
                 }
             }
         }

@@ -291,7 +291,7 @@ RectTransform:
   m_Children:
   - {fileID: 1108909180}
   m_Father: {fileID: 852269919}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1327,9 +1327,9 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 875639528}
   - {fileID: 152240790}
   - {fileID: 1457323836}
+  - {fileID: 875639528}
   m_Father: {fileID: 1787809544}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1415,7 +1415,7 @@ RectTransform:
   m_Children:
   - {fileID: 94711888}
   m_Father: {fileID: 852269919}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1758,7 +1758,7 @@ RectTransform:
   m_Children:
   - {fileID: 78709106}
   m_Father: {fileID: 852269919}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2904,7 +2904,7 @@ SpriteRenderer:
   m_SortingLayerID: 2143519845
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 75908f533b1814448be6e6888a77192e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2b2074abf5acb0344863b42fc6273652, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2975,6 +2975,7 @@ MonoBehaviour:
   gameOverPanel: {fileID: 2126371466}
   finalScore: {fileID: 1505144554}
   bestScore: {fileID: 403129480}
+  feverIsEnd: 0
 --- !u!114 &2131219076
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2988,7 +2989,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   loop: 1
   frameSeconds: 1
-  location: images/snowball2
+  locationExposed: images/SnowballExposed
+  locationCovered: images/SnowballCovered/
+  coveredScale: 7
   gameManager: {fileID: 0}
 --- !u!58 &2131219077
 CircleCollider2D:
