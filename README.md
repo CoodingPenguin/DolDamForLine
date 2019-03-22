@@ -7,7 +7,7 @@ RockyDownHill 라인 공모전 출시 버전입니다.
 - Doldam 폴더가 프로젝트 폴더입니다.  
 - keystore암호는 doldam  
 - Dol.apk 가 실행파일입니다.
-- 모바일 빌드할 땐 GameMamager의 GameManager.testEnvironment를 MOBILE로 설정해야합니다. (pc에서 테스트 할땐 PC로 설정)  
+- 모바일 빌드할 땐 GameManager의 GameManager.testEnvironment를 MOBILE로 설정해야합니다. (pc에서 테스트 할땐 PC로 설정)  
 
 
 ## 20180714 19:23 이영진  
