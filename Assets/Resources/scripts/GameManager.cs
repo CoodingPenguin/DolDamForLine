@@ -5,16 +5,18 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour {
+
     public static GameManager instance = null;
     
     public enum GameState
     {
         MENU,START,PLAYING,PAUSED
     };
+
     public enum TestEnvironment
     {
         PC,MOBILE
-    }
+    };
 
     public int feverState = 0;
     
@@ -47,7 +49,6 @@ public class GameManager : MonoBehaviour {
         else if (instance != this)
             Destroy(gameObject);
         //DontDestroyOnLoad(gameObject);
-        
 	}
 
     
