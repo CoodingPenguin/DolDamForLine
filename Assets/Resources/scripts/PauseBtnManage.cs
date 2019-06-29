@@ -1,22 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.Advertisements;
 
 public class PauseBtnManage : MonoBehaviour
 {
-
     public GameObject pausePanel;
-
     public AudioClip btnClicked;
     public AudioClip startBgm;
 
-
-
     public void Resume()
     {
+        Debug.Log("Resume Button Clicked");
         SoundManager.instance.bgmSource.Play();
         SoundManager.instance.PlaySingleForBtn(btnClicked);
         GameManager.instance.gameState = GameManager.GameState.PLAYING;
@@ -25,6 +23,7 @@ public class PauseBtnManage : MonoBehaviour
 
     public void Restart()
     {
+        //UnityEngine.Debug.log("Restart Button Clicked");
         SoundManager.instance.PlaySingleForBtn(btnClicked);
         ShowRewardedAdRestart();
 
@@ -32,6 +31,7 @@ public class PauseBtnManage : MonoBehaviour
 
     public void MainMenu()
     {
+        //UnityEngine.Debug.log("MainMenu Button Clicked");
         SoundManager.instance.PlaySingleForBtn(btnClicked);
         SoundManager.instance.PlayBgm(startBgm, true);
         ShowRewardedAdMain();

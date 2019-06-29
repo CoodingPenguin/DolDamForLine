@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using TMPro;
 
 public class GameManager : MonoBehaviour {
     public static GameManager instance = null;
@@ -31,8 +32,8 @@ public class GameManager : MonoBehaviour {
     public GameObject gameOverPanel;
 
     public int score;
-    public Text scoreText;
-
+    public TextMeshProUGUI scoreText;
+    
 	// Use this for initialization
 	void Awake () {
         if (instance == null)
