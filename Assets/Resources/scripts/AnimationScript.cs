@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class AnimationScript : MonoBehaviour {
+
     public bool loop;
     public float frameSeconds;
     //The file location of the sprites within the resources folder

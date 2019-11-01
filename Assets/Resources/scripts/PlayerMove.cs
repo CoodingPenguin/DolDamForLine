@@ -75,7 +75,7 @@ public class PlayerMove : MonoBehaviour
         width = GetComponent<SpriteRenderer>().sprite.rect.width / GetComponent<SpriteRenderer>().sprite.pixelsPerUnit;
         
         ScreenWidth = 10.8f - GameObject.FindGameObjectWithTag("SideWall").GetComponent<SpriteRenderer>().sprite.rect.width / GetComponent<SpriteRenderer>().sprite.pixelsPerUnit;
-        SoundManager.instance.PlayBgm(bgmSound, true);
+        //SoundManager.instance.PlayBgm(bgmSound, true);
         Debug.Log("width:" + width);
         Debug.Log("swidth:" + ScreenWidth);
 
@@ -121,7 +121,7 @@ public class PlayerMove : MonoBehaviour
                 MoveAndRotate();  
                 if (ballScale >= goToFeverScale)
                 {
-                    SoundManager.instance.PlaySingle(feverStart);
+                    //SoundManager.instance.PlaySingle(feverStart);
                     GameManager.instance.feverState = 1;
                     SetScale(goToFeverScale);
                     GameObject p = Instantiate(feverParticle, transform.position, Quaternion.identity);
@@ -182,7 +182,7 @@ public class PlayerMove : MonoBehaviour
                     {
                         if (col.tag == "Snowman")
                         {
-                            SoundManager.instance.RandomizeSfx(colliSnow1, colliSnow2, colliSnow3);
+                            //SoundManager.instance.RandomizeSfx(colliSnow1, colliSnow2, colliSnow3);
                             GameObject p = Instantiate(snowmanParticle, col.transform.position, Quaternion.identity);
                             Destroy(p, 2f);
                             os.HitByPlayer();
@@ -192,7 +192,7 @@ public class PlayerMove : MonoBehaviour
                         } 
                         else if (col.tag == "Wall" || col.tag == "Tree")
                         {
-                            SoundManager.instance.RandomizeSfx(colliWall1, colliWall2, colliWall3);
+                            //SoundManager.instance.RandomizeSfx(colliWall1, colliWall2, colliWall3);
                             GameObject p = Instantiate(SnowParticle, col.transform.position, Quaternion.identity);
                             p.transform.localScale = p.transform.localScale * ballScale / 4;
                             Destroy(p, 2f);
@@ -239,7 +239,7 @@ public class PlayerMove : MonoBehaviour
         dir = 0;
         if (InputLeft())
         {
-            transform.position += new Vector3(moveSpeed + ballScale / 5, 0) * Time.deltaTime * Input.acceleration.x*4;
+            transform.position += new Vector3(moveSpeed + ballScale / 5, 0) * Time.deltaTime * Input.acceleration.x * 4;
             dir = -1;
             beforeDir = -1;
             if (transform.rotation.z <= 0.2 && transform.rotation.z >= -0.2)
@@ -247,7 +247,7 @@ public class PlayerMove : MonoBehaviour
         }
         if (InputRight())
         {
-            transform.position += new Vector3(moveSpeed + ballScale / 5, 0) * Time.deltaTime * Input.acceleration.x*4;
+            transform.position += new Vector3(moveSpeed + ballScale / 5, 0) * Time.deltaTime * Input.acceleration.x * 4;
             dir = 1;
             beforeDir = 1;
             if (transform.rotation.z <= 0.2 && transform.rotation.z >= -0.2)
@@ -290,6 +290,7 @@ public class PlayerMove : MonoBehaviour
         }
         return false;
     }
+
     bool InputRight()
     {
 

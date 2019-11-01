@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour {
 
     public static GameManager instance = null;
     
+    // 게임 스테이트 정의
     public enum GameState
     {
         MENU,START,PLAYING,PAUSED

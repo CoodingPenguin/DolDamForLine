@@ -1322,7 +1322,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   feverState: 0
   gameState: 0
-  testEnvironment: 1
+  testEnvironment: 0
   pauseSound1: {fileID: 8300000, guid: 48ab8e59234d3c747913aaed9c2b3596, type: 3}
   pauseSound2: {fileID: 8300000, guid: 4ce0338f17cf9fc4f84e81fcc2d49c96, type: 3}
   pausePanel: {fileID: 0}
@@ -3178,8 +3178,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   loop: 1
   frameSeconds: 1
-  locationExposed: images/SnowballExposed
-  locationCovered: images/SnowballCovered/
+  locationExposed: Images\Object\SnowballExposed
+  locationCovered: Images\Object\SnowballCovered
   coveredScale: 7
   gameManager: {fileID: 0}
 --- !u!58 &2131219077
